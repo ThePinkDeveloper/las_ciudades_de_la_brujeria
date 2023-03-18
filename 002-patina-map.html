@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciudades de brujería - Introducción</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .front {
+            display: flex;
+            flex-direction: column;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div id="front" class="front">
+        <img src="./images/patina-map.jpg" alt="Mapa de Pátina">
+    </div>
+</body>
+</html>
+
+<script>
+    const body = document.getElementById('body');
+    body.addEventListener('click', (event) => {
+        console.log(screen);
+        if (event.clientX < screen.width / 2) {
+            location.href = './001-intro.html';
+        } else {
+            location.href = './003-module-df1-intro.html';
+        }
+    });
+</script>
